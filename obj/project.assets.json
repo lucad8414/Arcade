@@ -2,6 +2,13 @@
   "version": 3,
   "targets": {
     "net9.0": {
+      "MonoGame.Content.Builder.Task/3.8.4.1": {
+        "type": "package",
+        "build": {
+          "build/MonoGame.Content.Builder.Task.props": {},
+          "build/MonoGame.Content.Builder.Task.targets": {}
+        }
+      },
       "MonoGame.Framework.DesktopGL/3.8.4.1": {
         "type": "package",
         "dependencies": {
@@ -127,6 +134,20 @@
     }
   },
   "libraries": {
+    "MonoGame.Content.Builder.Task/3.8.4.1": {
+      "sha512": "jf6IZXMiOhuybRaWQt//u+804yzMRGk3ZRvlBJG/0iusRwTunJsQvA6tMMJJc7gjUrY6rUkzRqwinKWXugyHfA==",
+      "type": "package",
+      "path": "monogame.content.builder.task/3.8.4.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "build/MonoGame.Content.Builder.Task.props",
+        "build/MonoGame.Content.Builder.Task.targets",
+        "monogame.content.builder.task.3.8.4.1.nupkg.sha512",
+        "monogame.content.builder.task.nuspec"
+      ]
+    },
     "MonoGame.Framework.DesktopGL/3.8.4.1": {
       "sha512": "YybxIIT5+Ky78E/XdkS0glyluMr2EeDZwx2LqXULAOCqiKt1+aDrjPZaqLL5qpNgBcMEHUeZJ4YjWe4TAZlWLw==",
       "type": "package",
@@ -269,7 +290,8 @@
   },
   "projectFileDependencyGroups": {
     "net9.0": [
-      "MonoGame.Framework.DesktopGL >= 3.8.4.1"
+      "MonoGame.Content.Builder.Task >= 3.8.*",
+      "MonoGame.Framework.DesktopGL >= 3.8.*"
     ]
   },
   "packageFolders": {
@@ -278,11 +300,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lucad\\RiderProjects\\Arcade\\Arcade.csproj",
-      "projectName": "Arcade",
-      "projectPath": "C:\\Users\\lucad\\RiderProjects\\Arcade\\Arcade.csproj",
+      "projectUniqueName": "C:\\Users\\lucad\\RiderProjects\\MyGame\\MyGame.csproj",
+      "projectName": "MyGame",
+      "projectPath": "C:\\Users\\lucad\\RiderProjects\\MyGame\\MyGame.csproj",
       "packagesPath": "C:\\Users\\lucad\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lucad\\RiderProjects\\Arcade\\obj\\",
+      "outputPath": "C:\\Users\\lucad\\RiderProjects\\MyGame\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\lucad\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -317,9 +339,13 @@
       "net9.0": {
         "targetAlias": "net9.0",
         "dependencies": {
+          "MonoGame.Content.Builder.Task": {
+            "target": "Package",
+            "version": "[3.8.*, )"
+          },
           "MonoGame.Framework.DesktopGL": {
             "target": "Package",
-            "version": "[3.8.4.1, )"
+            "version": "[3.8.*, )"
           }
         },
         "imports": [
